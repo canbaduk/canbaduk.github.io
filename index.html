@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-Eventos 
+Eventos
 <div class="links">
 <ul>
   {% for post in site.posts limit:20 %}
@@ -40,7 +40,7 @@ Noticias
 
 <br />
 
-Enlaces diversos 
+Enlaces diversos
 <div class="links">
 <ul>
   {% for post in site.posts limit:10 %}
@@ -62,17 +62,9 @@ Enlaces diversos
 
 Dónde jugar en España
 <div class="links">
-<ul>
-  {% for post in site.posts limit:10 %}
-	{% if post.category == "donde" %}
-	<li>
-
-   <span class="link_tags">
-      {{post.comment}}
-   </span> <a href="{{ post.link }}">{{ post.title }}</a>
-  </li>
-	{% endif %}
-
-  {% endfor %}
-</ul>
+  {% for page in site.pages %}
+    {% if page.category == "donde" %}
+      {{ page.content}}
+    {% endif %}
+  {%endfor %}
 </div>
