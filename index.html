@@ -20,36 +20,16 @@ Eventos
 
 <br />
 
-Noticias
+Noticias y enlaces diversos
 <div class="links">
 <ul>
   {% for post in site.posts limit:10 %}
-	{% if post.category == "noticia" %}
+	{% if post.category == "novedad" %}
 	<li>
 <span class="link_date">{{ post.date | date: "%Y.%m.%d" }}</span>
     <a href="{{ post.link }}">{{ post.title }}</a>
     <span class="link_tags">
 	{{post.comment}}
-   </span>
-  </li>
-	{% endif %}
-
-  {% endfor %}
-</ul>
-</div>
-
-<br />
-
-Enlaces diversos
-<div class="links">
-<ul>
-  {% for post in site.posts limit:10 %}
-	{% if post.category == "video" %}
-	<li>
-    <span class="link_date">{{ post.date | date: "%Y.%m.%d" }}</span>
-    <a href="{{ post.link }}">{{ post.title }}</a>
-    <span class="link_tags">
-      {{post.comment}}
    </span>
   </li>
 	{% endif %}
