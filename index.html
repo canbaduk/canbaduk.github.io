@@ -4,7 +4,7 @@ layout: default
 Eventos
 <div class="links">
 <ul>
-  {% for post in site.posts limit:20 %}
+  {% for post in site.posts %}
 	{% if post.category == "evento" %}
 	<li>
     <a href="{{ post.link }}">{{ post.title }}</a>
@@ -23,7 +23,7 @@ Eventos
 Noticias y enlaces diversos
 <div class="links">
 <ul>
-  {% for post in site.posts limit:10 %}
+  {% for post in site.posts %}
 	{% if post.category == "novedad" %}
 	<li>
 <span class="link_date">{{ post.date | date: "%Y.%m.%d" }}</span>
